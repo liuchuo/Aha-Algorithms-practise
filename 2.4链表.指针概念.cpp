@@ -24,4 +24,40 @@ head = NULL;
 struct node *p;
 p = (struct node *)malloc(sizeof(struct node));
 
+int t;
+cin >> t;
+p->data = t;
+p->next = NULL;
 
+
+创建一个链表全过程：
+#include <iostream>
+using namespace std;
+struct node {
+	int data;
+	struct node *next;
+};
+
+int main() {
+	struct node *head, *p, *q, *t;
+	int n, a;
+	cin >> n;
+	head = NULL;
+	for (int i = 1; i <= n; i++) {
+		cin >> a;
+		p = (struct node *)malloc(sizeof(struct node));
+		p->data = a;
+		p->next = NULL;
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+`
