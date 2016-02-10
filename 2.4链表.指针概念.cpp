@@ -48,8 +48,37 @@ int main() {
 		p = (struct node *)malloc(sizeof(struct node));
 		p->data = a;
 		p->next = NULL;
-		
+		if (head == NULL) {
+			head = p;
+		}else {
+			q->next = p;
+		}
+
+		q = p;
 	}
+
+	//在链表中插入一个结点(按顺序)
+	int b;
+	cin >> b;
+	t = head;
+	while (t != NULL) {
+		if (t->next->data > a) {
+			p = (struct node *)malloc(sizeof(struct node));
+			p->data = a;
+			p->next = t->next;
+			t->next = p;
+			break;
+		}
+		t = t->next;
+	}
+	
+	//输出链表的值：
+	t = head;
+	while (t != NULL) {
+		cout << t->data;
+		t = t->next;
+	}
+	return 0;
 }
 
 
@@ -57,7 +86,3 @@ int main() {
 
 
 
-
-
-
-`
