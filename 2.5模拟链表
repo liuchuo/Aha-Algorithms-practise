@@ -19,5 +19,25 @@ int main() {
 		}
 	}
 
-	
+	int len = n;
+	len++;
+	cin >> data[len];
+
+	int t = 1;
+	while (t != 0) {
+		if (data[right[t]] > data[len]) {
+			right[len] = right[t];
+			right[t] = len;
+			break;
+		}
+		t = right[t];
+	}
+
+	t = 1;
+	while (t != 0) {
+		cout << data[t] << " ";
+		t = right[t];
+	}
+
+	return 0;
 }
