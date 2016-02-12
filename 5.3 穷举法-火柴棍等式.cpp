@@ -10,7 +10,10 @@ m根火柴棍可以拼出多少种A+B=C的等式？
 #include <iostream>
 using namespace std;
 int func(int x) {
+	int num;
+	int a[10] = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
 	
+	return sum;
 }
 int main() {
 	int m;
