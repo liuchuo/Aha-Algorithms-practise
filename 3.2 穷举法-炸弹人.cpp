@@ -57,10 +57,12 @@ int main() {
 
 				if (sum > map) {
 					map = sum;
-
+					p = i;
+					q = j;
 				}
 			}
 		}
 	}
+	cout << "炸弹放在" << "(" << p << "," << q << ")处，" << "最多可以消灭" << map << "个敌人" << endl;
 	return 0;
 }
