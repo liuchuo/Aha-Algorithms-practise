@@ -5,7 +5,7 @@ int a[51][51];
 int book[51][51];
 int p, q;
 int n, m;
-int min = 999999;
+int min1 = 999999;
 void dfs(int x, int y, int step) {
 	int next[4][2] = {
 		{0, 1},
@@ -14,9 +14,9 @@ void dfs(int x, int y, int step) {
 		{0, -1}
 	};
 	int tx, ty;
-	if (x == p && y = q) {
-		if (step < min) {
-			min = step;
+	if (x == p && y == q) {
+		if (step < min1) {
+			min1 = step;
 		}
 		return;
 	}
@@ -47,7 +47,7 @@ int main() {
 	cin >> startx >> starty;
 	book[startx][starty] = 1;
 	dfs(startx, starty, 1);
-	cout << min;
+	cout << min1;
 	return 0;
 }
 
