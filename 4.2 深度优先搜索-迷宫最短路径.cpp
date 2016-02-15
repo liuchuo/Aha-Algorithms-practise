@@ -25,7 +25,7 @@ void dfs(int x, int y, int step) {
 		tx = x + next[k][0];
 		ty = y + next[k][1];
 
-		if (tx < 1 || ty < 1 || tx > m || ty > n)
+		if (tx < 1 || ty < 1 || tx > n || ty > m)
 			continue;
 		if (a[tx][ty] == 0 && book[tx][ty] == 0) {
 			book[tx][ty] = 1;
